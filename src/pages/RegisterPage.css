@@ -1,0 +1,132 @@
+/* Global Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  background: linear-gradient(135deg, #232b38 0%, #1a202c 100%);
+  color: #fff;
+  min-height: 100vh;
+  min-width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow-x: hidden;
+}
+
+/* Container for the register form */
+.register-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 80vh;
+  width: 100%;
+  max-width: 420px;
+  margin: 0 auto;
+  text-align: center;
+  padding: 0 12px;
+  animation: slideInFromTop 0.6s ease-out forwards; /* Added animation */
+}
+
+/* Welcome Admin heading */
+.welcome-text {
+  font-size: 2.8rem;
+  font-weight: 700;
+  margin-bottom: 2.5rem;
+  color: #fff;
+  text-shadow: 0 2px 4px rgba(0,0,0,0.25);
+  letter-spacing: 0.5px;
+}
+
+/* Register form layout */
+.register-form {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 1.3rem;
+  align-items: center;
+}
+
+/* Input field styling */
+.input-field {
+  width: 100%;
+  max-width: 400px;
+  background-color: #e8f0fe;
+  border-radius: 8px;
+  border: none;
+  padding: 15px 18px;
+  font-size: 1.08rem;
+  color: #232b38;
+  outline: none;
+  transition: box-shadow 0.18s;
+  box-sizing: border-box;
+}
+
+.input-field:focus {
+  box-shadow: 0 0 0 2px #28a74555;
+}
+
+.input-field::placeholder {
+  color: #232b38;
+  opacity: 1;
+}
+
+/* Register button styling */
+.register-button {
+  width: 100%;
+  max-width: 400px;
+  background-color: #28a745;
+  color: #fff;
+  padding: 15px 0;
+  font-size: 1.15rem;
+  font-weight: bold;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  margin-top: 0.5rem;
+  transition: background 0.2s;
+  letter-spacing: 1px;
+}
+
+.register-button:hover:not(:disabled) {
+  background-color: #218838;
+}
+
+.register-button:disabled {
+  background-color: #555;
+  color: #ccc;
+  cursor: not-allowed;
+}
+
+html, body, #root {
+  height: 100%;
+  min-height: 100vh;
+  width: 100%;
+}
+
+body, #root {
+  background: linear-gradient(135deg, #232b38 0%, #1a202c 100%) !important;
+  min-height: 100vh;
+  min-width: 100vw;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Animation */
+@keyframes slideInFromTop {
+  from {
+    transform: translateY(-100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}

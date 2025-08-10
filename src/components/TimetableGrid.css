@@ -1,0 +1,25 @@
+.timetable-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.timetable-day {
+  flex: 1;
+  min-width: 200px;
+}
+
+.period-row {
+  display: flex;
+  flex-direction: column;
+}
+
+.period-cell {
+  border: 1px solid #ccc;
+  padding: 12px;
+  text-align: center;
+  min-height: 60px;
+  background-color: #f9f9f9;
+  margin-bottom: 4px;
+  outline: none;
+}

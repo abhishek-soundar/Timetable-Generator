@@ -1,0 +1,111 @@
+/* Reset root, body, and container styles */
+#root,
+body,
+.login-container {
+  background: none !important;
+  background-color: transparent !important;
+  box-shadow: none !important;
+  border: none !important;
+  border-radius: 0 !important;
+  outline: none !important;
+  padding: 0 !important;
+  margin: 0 !important;
+}
+
+/* Gradient background only on the login container */
+.login-container {
+  min-height: 100vh;
+  min-width: 100vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(135deg, #232b38 0%, #1a202c 100%) !important;
+}
+
+/* Wrapper for the login area (title and form) */
+.login-area {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  animation: slideInFromTop 0.6s ease-out forwards; /* Apply animation here */
+}
+
+/* Login title styling */
+.login-title {
+  color: #fff;
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+/* Login form styling: no background, border, or shadow */
+.login-form {
+  background: none !important;
+  border: none !important;
+  box-shadow: none !important;
+  border-radius: 0 !important;
+  padding: 0 !important;
+  min-width: 400px;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+/* Input styling */
+.login-input {
+  height: 56px;
+  font-size: 1.2rem;
+  background: #e8f0fe;
+  border-radius: 8px;
+  padding: 0 1rem;
+  border: none;
+  width: 100%;
+  color: #232b38;
+  outline: none;
+  transition: box-shadow 0.2s;
+}
+
+/* Input focus effect */
+.login-input:focus {
+  box-shadow: 0 0 0 2px #22c55e;
+}
+
+/* Placeholder styling */
+.login-input::placeholder {
+  font-size: 1.1rem;
+  color: #8a97a8;
+  opacity: 1;
+}
+
+/* Button styling */
+.login-button {
+  background: #22c55e;
+  color: #fff;
+  font-weight: 700;
+  border-radius: 8px;
+  padding: 1rem 0;
+  font-size: 1.1rem;
+  margin-top: 1rem;
+  border: none;
+  cursor: pointer;
+  transition: background 0.2s;
+  box-shadow: none;
+}
+
+.login-button:hover {
+  background: #16a34a;
+}
+
+/* Animation */
+@keyframes slideInFromTop {
+  from {
+    transform: translateY(-100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}

@@ -1,0 +1,234 @@
+/* === RESET & FULL-HEIGHT GRADIENT === */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body, #root {
+  width: 100%;
+  height: 100%;
+  min-height: 100vh;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  font-family: 'Inter', sans-serif;
+  background: linear-gradient(135deg, #232b38 0%, #1a202c 100%);
+}
+
+/* === APP WRAPPER (ensures full height and padding) === */
+.timetable-container {
+  width: 100%;
+  max-width: 900px;
+  margin: 40px auto;
+  text-align: center;
+  padding: 0 15px 30px 15px;
+  animation: slideInFromTop 0.6s ease-out forwards;
+  min-height: 95vh; /* Full viewport height */
+  overflow-y: auto; /* Allow smooth scroll */
+  scroll-behavior: smooth;
+
+  /* 🔥 Keep transparent to see gradient */
+  background: transparent;
+
+  border-radius: 18px;
+  /* Optional: remove shadow if you want cleaner look */
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
+}
+
+/* Chocolate headings */
+.timetable-title {
+  color: chocolate;
+  font-size: 2.7rem;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 2.2rem;
+  letter-spacing: 1px;
+}
+
+/* Selectors */
+.selectors {
+  display: flex;
+  gap: 2rem;
+  justify-content: center;
+  margin-bottom: 2rem;
+}
+
+.big-select {
+  background: #e8e8e8;
+  border: none;
+  border-radius: 12px;
+  padding: 14px 28px;
+  font-size: 1.1rem;
+  color: #232b38;
+  font-weight: 500;
+  outline: none;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+  transition: box-shadow 0.2s;
+}
+
+/* Subject rows */
+.subject-rows {
+  margin-bottom: 2rem;
+   overflow: visible;
+}
+
+.subject-row-heading {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+  background: #bdbdbd;
+  border-radius: 18px;
+  padding: 12px 10px;
+  margin-bottom: 1rem;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.10);
+}
+
+.subject-row-heading .subject-heading-cell {
+  flex: 1;
+  text-align: center;
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: chocolate; /* Set the color to chocolate */
+  text-transform: uppercase;
+  max-width: 160px;
+}
+
+.subject-row-heading .subject-heading-cell:last-child {
+  max-width: 140px;
+}
+
+.subject-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1rem;
+  background: #e0e0e0;
+  border-radius: 18px;
+  padding: 12px 10px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.10);
+}
+
+.subject-input {
+  background-color: #fff;
+  border-radius: 10px;
+  padding: 14px 20px;
+  font-size: 1.1rem;
+  color: #232b38;
+  border: none;
+  width: 160px;
+  outline: none;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.06);
+  transition: box-shadow 0.2s;
+  flex: 1;
+  max-width: 160px;
+  text-align: center;
+}
+
+.subject-input:focus {
+  box-shadow: 0 0 0 2px #22c55e;
+}
+
+/* Chocolate period/label */
+.chocolate-label {
+  color: chocolate;
+  font-weight: 700;
+  font-size: 1.1rem;
+  margin-right: 10px;
+}
+
+/* Time Editor */
+.time-editor {
+  margin-top: 2rem;
+   overflow: visible;
+}
+
+.period-list {
+  margin-bottom: 1.5rem;
+}
+
+.period-row {
+  display: flex;
+  align-items: center;
+  gap: 1.2rem;
+  background: #bdbdbd;
+  padding: 16px 14px;
+  border-radius: 16px;
+  margin-bottom: 16px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.10);
+  justify-content: flex-start;
+}
+
+.period-row input[type="time"] {
+  padding: 8px 12px;
+  border-radius: 8px;
+  border: none;
+  font-size: 1.1rem;
+  background: #fff;
+  color: #232b38;
+  outline: none;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.08);
+  transition: box-shadow 0.2s;
+}
+
+.period-row input[type="time"]:focus {
+  box-shadow: 0 0 0 2px #22c55e;
+}
+
+/* Big, curvy buttons */
+.big-btn {
+  font-size: 1.15rem;
+  font-weight: bold;
+  border: none;
+  border-radius: 18px;
+  padding: 16px 36px;
+  margin: 0.5rem 0.5rem;
+  cursor: pointer;
+  transition: background 0.2s, color 0.2s;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.09);
+  min-width: 140px;
+}
+
+/* Remove button - Light Red */
+.remove-btn {
+  background: #ff4040;
+  color: #fff;
+}
+
+.remove-btn:hover {
+  background: #e63939;
+}
+
+/* Generate Timetable button - Green */
+.generate-btn {
+  background: #22c55e;
+  color: #fff;
+}
+
+.generate-btn:hover {
+  background: #15803d;
+}
+
+/* Other buttons - Light Blue */
+.lightblue-btn {
+  background: #4fc3f7;
+  color: #fff;
+}
+
+.lightblue-btn:hover {
+  background: #0288d1;
+}
+
+/* Animation */
+@keyframes slideInFromTop {
+  from {
+    transform: translateY(-100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}

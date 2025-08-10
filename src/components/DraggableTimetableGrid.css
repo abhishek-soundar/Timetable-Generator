@@ -1,0 +1,32 @@
+.day-row {
+  margin-bottom: 20px;
+}
+
+.periods {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.period-cell {
+  min-width: 100px;
+  padding: 12px;
+  border: 1px solid #ccc;
+  background-color: #f9f9f9;
+  text-align: center;
+  transition: background-color 0.3s ease;
+}
+
+.period-cell.filled {
+  background-color: #e6f7ff;
+}
+
+.cell-content strong {
+  color: black;
+}
+
+.cell-content small {
+  display: block;
+  font-size: 0.8em;
+  color: #555;
+}
